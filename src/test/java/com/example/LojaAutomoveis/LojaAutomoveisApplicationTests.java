@@ -7,9 +7,7 @@ import com.example.LojaAutomoveis.service.JDBCService;
 import com.example.LojaAutomoveis.service.VeiculoService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
 class LojaAutomoveisApplicationTests {
 	VeiculoService veiculoService;
 	Veiculo onix, strada, celta;

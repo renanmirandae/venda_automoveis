@@ -44,3 +44,12 @@
 [2022-08-29 17:25:09] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
 [2022-08-29 17:25:10] [ DEBUG] [ConfigurarJDBC:75] Error ao conectar com o banco de dados
 [2022-08-29 17:25:36] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:26] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:26] [ DEBUG] [ConfigurarJDBC:75] Error ao conectar com o banco de dados
+[2022-08-29 17:35:26] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:26] [ DEBUG] [ConfigurarJDBC:75] Error ao conectar com o banco de dados
+[2022-08-29 17:35:39] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:40] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:40] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:35:40] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
+[2022-08-29 17:36:36] [ INFO ] [ConfigurarJDBC:68] Conectando com o banco de dados
