@@ -9,7 +9,7 @@ import java.sql.Statement;
 
 public class ConfigurarJDBC {
     private String driver, usuario, url, senha;
-    private static final String CREATE = "create table if not exists veiculo(id int primary key auto_increment, marca varchar(50), modelo varchar(50), valor Float(10,2));";
+    private static final String CREATE = "create table if not exists veiculo(id int primary key auto_increment, marca varchar(50), modelo varchar(50), valor Float);";
     private Logger logger = Logger.getLogger(ConfigurarJDBC.class);
 
     public ConfigurarJDBC(String driver, String usuario, String url, String senha) {
@@ -69,9 +69,6 @@ public class ConfigurarJDBC {
             connection = DriverManager.getConnection(getUrl(), getUsuario(), getSenha());
             statement = connection.createStatement();
             statement.execute(CREATE);
-
-            connection.close();
-            statement.close();
 
         }catch(SQLException error)
         {

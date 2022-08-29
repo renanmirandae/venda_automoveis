@@ -1,7 +1,7 @@
 package com.example.LojaAutomoveis.daoPattern;
 
+import com.example.LojaAutomoveis.model.ConfigurarJDBC;
 import com.example.LojaAutomoveis.model.Veiculo;
-import com.example.LojaAutomoveis.service.JDBCService;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -10,8 +10,12 @@ import java.sql.Statement;
 import java.util.logging.Logger;
 
 public class VeiculoDaoH2 implements IDao<Veiculo>{
-    private JDBCService jdbcService;
+    private ConfigurarJDBC configurarJDBC;
     private Logger logger = Logger.getLogger(String.valueOf(VeiculoDaoH2.class));
+
+    public VeiculoDaoH2(ConfigurarJDBC configurarJDBC) {
+        this.configurarJDBC = configurarJDBC;
+    }
 
     @Override
     public Veiculo salvar(Veiculo veiculo) {
@@ -22,7 +26,7 @@ public class VeiculoDaoH2 implements IDao<Veiculo>{
         try
         {
             logger.info("Salvando dados do veiculo no banco");
-            connection = jdbcService.conectarBanco();
+            connection = configurarJDBC.conectarBanco();
             statement = connection.createStatement();
             statement.executeUpdate(query, statement.RETURN_GENERATED_KEYS);
             ResultSet keys = statement.getGeneratedKeys();

@@ -20,9 +20,9 @@ public class VeiculoService {
         return this.veiculoDao.buscar(veiculo);
     }
 
-    public Veiculo registrarVeiculo(int id, String marca, String modelo, Float valor)
+    public Veiculo registrarVeiculo(String marca, String modelo, Float valor)
     {
-        Veiculo veiculo = new Veiculo(id, marca, modelo, valor);
+        Veiculo veiculo = new Veiculo(marca, modelo, valor);
         return veiculo;
     }
 }

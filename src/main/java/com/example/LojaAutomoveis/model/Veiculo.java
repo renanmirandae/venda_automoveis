@@ -5,8 +5,7 @@ public class Veiculo {
     private int id;
     private Float valor;
 
-    public Veiculo(int id, String marca, String modelo, Float valor) {
-        this.id = id;
+    public Veiculo(String marca, String modelo, Float valor) {
         this.marca = marca;
         this.modelo = modelo;
         this.valor = valor;
