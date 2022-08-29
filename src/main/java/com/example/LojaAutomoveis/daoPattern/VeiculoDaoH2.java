@@ -47,7 +47,28 @@ public class VeiculoDaoH2 implements IDao<Veiculo>{
     }
 
     @Override
-    public Veiculo buscar(Veiculo veiculo) {
-        return null;
+    public String buscar() {
+        Connection connection = null;
+        Statement statement;
+        String query = "select * from veiculo";
+        String listaVeiculos = " ";
+        try
+        {
+            logger.info("Buscando veiculos no banco de dados");
+            connection = configurarJDBC.conectarBanco();
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while(resultSet.next())
+            {
+                listaVeiculos = listaVeiculos + String.format("{id: '%s', marca: '%s', modelo: '%s', valor: '%s'}", resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getFloat(4));
+            }
+        }catch(SQLException error)
+        {
+            logger.info("Erro em listar veiculos");
+            error.printStackTrace();
+        }
+
+        return listaVeiculos;
     }
 }

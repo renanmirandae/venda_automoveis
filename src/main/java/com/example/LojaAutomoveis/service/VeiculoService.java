@@ -15,9 +15,9 @@ public class VeiculoService {
         return veiculoDao.salvar(veiculo);
     }
 
-    public Veiculo buscar(Veiculo veiculo)
+    public String buscar()
     {
-        return this.veiculoDao.buscar(veiculo);
+        return this.veiculoDao.buscar();
     }
 
     public Veiculo registrarVeiculo(String marca, String modelo, Float valor)

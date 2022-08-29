@@ -1,14 +1,18 @@
-package com.example.LojaAutomoveis.service;
+package com.example.LojaAutomoveis.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+import com.example.LojaAutomoveis.daoPattern.VeiculoDaoH2;
+import com.example.LojaAutomoveis.model.ConfigurarJDBC;
+import com.example.LojaAutomoveis.service.VeiculoService;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LojaAutomoveisService {
-
-    @GetMapping("/listaveiculos")
+    @RequestMapping("/listaveiculos")
     public String listaVeiculos()
     {
-        return "Lista de veiculos";
+        VeiculoService veiculoService = new VeiculoService(new VeiculoDaoH2(new ConfigurarJDBC()));;
+
+        return veiculoService.buscar();
     }
 }

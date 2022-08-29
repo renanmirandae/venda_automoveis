@@ -42,4 +42,14 @@ public class Veiculo {
     public void setValor(Float valor) {
         this.valor = valor;
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", id=" + id +
+                ", valor=" + valor +
+                '}';
+    }
 }

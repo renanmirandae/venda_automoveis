@@ -29,4 +29,11 @@ class LojaAutomoveisApplicationTests {
 		veiculoService.salvar(strada);
 		veiculoService.salvar(celta);
 	}
+
+	@Test
+	void buscarVeiculo()
+	{
+		//Retornando String com dados de todos os veiculos inclusos no banco de dados
+		System.out.println(veiculoService.buscar());
+	}
 }
