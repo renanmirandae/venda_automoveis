@@ -63,6 +63,10 @@ public class VeiculoDaoH2 implements IDao<Veiculo>{
             {
                 listaVeiculos = listaVeiculos + String.format("{id: '%s', marca: '%s', modelo: '%s', valor: '%s'}", resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getFloat(4));
             }
+
+            connection.close();
+            statement.close();
+            resultSet.close();
         }catch(SQLException error)
         {
             logger.info("Erro em listar veiculos");
